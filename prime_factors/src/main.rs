@@ -3,7 +3,7 @@ use std::io;
 fn main() {
     // Use only natural numbers.
     let mut input = String::new();
-    
+
     // Experimenting with matching and looping until user enters valid input. Very cool
     loop {
         println!("Please enter a number: ");
@@ -20,7 +20,7 @@ fn main() {
             }
 
             Err(_) => {
-                println!("Please enter a natural number.");
+                println!("Input was not valid. Please enter a natural number.");
             }
         };
     }
@@ -31,7 +31,7 @@ fn factors(mut number: u64) -> Vec<u64> {
     let mut prime_factors = vec![];
 
     while i <= number {
-        while number.is_multiple_of(i) && number > 0 {
+        while number.is_multiple_of(i) {
             prime_factors.push(i);
             number /= i;
         }
