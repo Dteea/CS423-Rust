@@ -35,23 +35,19 @@ fn collatz_conjecture(mut number: u64) -> Option<u64> {
     let mut steps = 0;
 
     loop {
+        if number == 1 {
+            return Some(steps);
+        }
+
         match number % 2 {
             // Even case
             0 => {
-                if number == 1 {
-                    return Some(steps);
-                }
-
                 number /= 2;
                 steps += 1;
             }
 
             // Odd case
             1 => {
-                if number == 1 {
-                    return Some(steps);
-                }
-
                 number = (number * 3) + 1;
                 steps += 1;
             }
