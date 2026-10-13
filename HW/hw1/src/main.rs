@@ -53,12 +53,13 @@ fn rule110(bits: [bool; 3]) -> bool {
 // This function takes in a array ref of 8 bools and converts it into characters representing 0 and 1 and returns back the row
 // after it is done borrowing.
 fn display_row(row: &[bool; 8]) {
+    let mut string = String::new();
     for bool in row {
         match bool {
-            true => print!("*"),
-            false => print!("."),
+            true => string.push('*'),
+            false => string.push('.'),
         }
     }
-    println!("");
+    println!("{}", string);
     //row
 }
