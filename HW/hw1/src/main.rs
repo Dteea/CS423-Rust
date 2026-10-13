@@ -11,9 +11,8 @@ fn main() {
                 let temp = [
                     starting_row[(j + 7) % 8], // 7 % 8 = 7
                     starting_row[j % 8],       // 0 % 8 = 0
-                    starting_row[(j + 1) % 8],
-                ]; // 1 % 8 = 1
-
+                    starting_row[(j + 1) % 8], // 1 % 8 = 1
+                ]; 
                 //println!("{:?}", temp);
                 row[j] = rule110(temp);
             }
@@ -25,8 +24,8 @@ fn main() {
                 let temp = [
                     starting_row[(j + 7) % 8], // 7 % 8 = 7
                     starting_row[j % 8],       // 0 % 8 = 0
-                    starting_row[(j + 1) % 8],
-                ]; // 1 % 8 = 1
+                    starting_row[(j + 1) % 8], // 1 % 8 = 1
+                ]; 
 
                 //println!("{:?}", temp);
                 row[j] = rule110(temp);
@@ -38,6 +37,7 @@ fn main() {
     }
 }
 
+// This function takes in array slices with 3 elements and returns a bool depending on the listed cases.
 fn rule110(bits: [bool; 3]) -> bool {
     match bits {
         [true, true, true] => false,
@@ -62,5 +62,4 @@ fn display_row(row: [bool; 8]) {
         }
     }
     println!("{}", string);
-    //row
 }
