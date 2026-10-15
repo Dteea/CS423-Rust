@@ -3,33 +3,20 @@ fn main() {
 
     let mut row = [false; 8];
 
+    // Messed up and ended up spending hours on the first starting 3 elements. Thought it was index 0-2,
+    // but it is left, middle, right 7, 0, 1 :(
+
     // I'm sure there is a better way to do this.
-    for i in 0..9 {
-        if i == 0 {
-            for j in 0..8 {
-                // If starting at index 0, we need to look at index 7, 0, and 1 and keep sliding until a row is completed.
-                let temp = [
-                    starting_row[(j + 7) % 8], // 7 % 8 = 7
-                    starting_row[j % 8],       // 0 % 8 = 0
-                    starting_row[(j + 1) % 8], // 1 % 8 = 1
-                ]; 
-                //println!("{:?}", temp);
-                row[j] = rule110(temp);
-            }
-
-            display_row(starting_row);
-        } else {
-            for j in 0..8 {
-                // If starting at index 0, we need to look at index 7, 0, and 1 and keep sliding until a row is completed.
-                let temp = [
-                    starting_row[(j + 7) % 8], // 7 % 8 = 7
-                    starting_row[j % 8],       // 0 % 8 = 0
-                    starting_row[(j + 1) % 8], // 1 % 8 = 1
-                ]; 
-
-                //println!("{:?}", temp);
-                row[j] = rule110(temp);
-            }
+    for _ in 0..9 {
+        for j in 0..8 {
+            // If starting at index 0, we need to look at index 7, 0, and 1 and keep sliding until a row is completed.
+            let temp = [
+                starting_row[(j + 7) % 8], // 7 % 8 = 7
+                starting_row[j % 8],       // 0 % 8 = 0
+                starting_row[(j + 1) % 8], // 1 % 8 = 1
+            ];
+            //println!("{:?}", temp);
+            row[j] = rule110(temp);
         }
 
         display_row(row);
