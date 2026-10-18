@@ -3,22 +3,22 @@ fn main() {
 
     let mut row = [false; 8];
 
-    // Messed up and ended up spending hours on the first starting 3 elements. Thought it was index 0-2,
+    // Messed up and ended up spending hours on the first starting 3 elements. Thought it was index 0-2, 
     // but it is left, middle, right 7, 0, 1 :(
 
     // I'm sure there is a better way to do this.
     for _ in 0..9 {
-        for j in 0..8 {
-            // If starting at index 0, we need to look at index 7, 0, and 1 and keep sliding until a row is completed.
-            let temp = [
-                starting_row[(j + 7) % 8], // 7 % 8 = 7
-                starting_row[j % 8],       // 0 % 8 = 0
-                starting_row[(j + 1) % 8], // 1 % 8 = 1
-            ];
-            //println!("{:?}", temp);
-            row[j] = rule110(temp);
-        }
-
+            for j in 0..8 {
+                // If starting at index 0, we need to look at index 7, 0, and 1 and keep sliding until a row is completed.
+                let temp = [
+                    starting_row[(j + 7) % 8], // 7 % 8 = 7
+                    starting_row[j % 8],       // 0 % 8 = 0
+                    starting_row[(j + 1) % 8], // 1 % 8 = 1
+                ]; 
+                //println!("{?}", temp);
+                row[j] = rule110(temp);
+            }
+        
         display_row(row);
         starting_row = row;
     }
@@ -38,8 +38,7 @@ fn rule110(bits: [bool; 3]) -> bool {
     }
 }
 
-// This function takes in a array ref of 8 bools and converts it into characters representing 0 and 1 and returns back the row
-// after it is done borrowing.
+// This function takes in a array ref of 8 bools and converts it into characters representing 0 and 1 and returns ()
 fn display_row(row: [bool; 8]) {
     let mut string = String::new();
     for bool in row {
@@ -50,3 +49,5 @@ fn display_row(row: [bool; 8]) {
     }
     println!("{}", string);
 }
+
+// Tests
