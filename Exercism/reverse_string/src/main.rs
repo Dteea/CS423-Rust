@@ -1,5 +1,7 @@
 use std::io;
 
+
+/// Asks for user to enter something and will reverse the user's input and print it back out.
 fn main() {
     let mut input = String::new();
 
