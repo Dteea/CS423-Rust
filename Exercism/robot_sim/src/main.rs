@@ -1,4 +1,4 @@
-
+/// Cardinal Directions
 #[derive(PartialEq, Eq, Debug)]
 pub enum Direction {
     North,
@@ -7,6 +7,7 @@ pub enum Direction {
     West,
 }
 
+/// This robot struct is pretty simple, it holds the position and direction of the robot.
 pub struct Robot {
     x: i32,
     y: i32,
@@ -14,6 +15,7 @@ pub struct Robot {
 }
 
 impl Robot {
+    /// Robot constructor takes in the x and y coordinate and also the direction it is facing.
     pub fn new(x: i32, y: i32, d: Direction) -> Self {
         Self{x, y, d}
     }
@@ -75,6 +77,7 @@ impl Robot {
         self
     }
 
+    /// This function handles input passed in. It capitalizes all characters and matches the letter to an action.
     #[must_use]
     pub fn instructions(mut self, instructions: &str) -> Self {
         // Input: Capitalize everything, no numbers, Allow only left, right and advance as chars.
@@ -98,6 +101,7 @@ impl Robot {
     }
 }
 
+/// Left it up to user to play with the robot
 fn main () {
     // Made the choice of not creating a mutable robot. All of the methods for the robot struct will handle that
 }

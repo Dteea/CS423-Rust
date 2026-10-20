@@ -27,6 +27,8 @@ fn main() {
     }
 }
 
+/// This function takes in any positive number and depending on if it's even or odd, will be divided and multiplied, looping until
+/// 1 is reached. It returns Some value if 1 was reached, otherwise None is returned.
 fn collatz_conjecture(mut number: u64) -> Option<u64> {
     if number == 0 {
         println!("I don't know how you got past all the checking...");

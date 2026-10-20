@@ -19,6 +19,7 @@ fn main() {
     );
 }
 
+// A simple function that takes in any natural number and sums from 1 to n, then squaring the sum and returning it.
 fn square_of_sum(n: u32) -> u32 {
     let mut count = 1;
     let mut total = 0;
@@ -31,6 +32,7 @@ fn square_of_sum(n: u32) -> u32 {
     total.pow(2)
 }
 
+// This function takes in any natural number and squares each from 1 to n. The total is then squared and returned.
 fn sum_of_squares(n: u32) -> u32 {
     let mut count = 1;
     let mut total = 0;

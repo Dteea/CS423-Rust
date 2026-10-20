@@ -6,6 +6,10 @@ fn main() {
 
     does_string_have_matching_brackets(input);
 }
+
+/// This function takes in a string as an argument and loops through each character, checking to see if brackets are found.
+/// It utilizes a vector to store the current open brackets with a push and pop method and depending on if it finds a match, will be 
+/// popped from the vector. It returns true if all brackets are matching and false if not.
 fn does_string_have_matching_brackets(input: String) -> bool {
     let mut order_of_brackets = Vec::new();
     for char in input.trim().chars() {

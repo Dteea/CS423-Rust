@@ -1,5 +1,7 @@
 use std::io;
 
+/// Contains the process of asking for user input and checks to see if the user has entered in a valid number, otherwise it will keep
+/// looping until a number is entered in.
 fn main() {
     // Use only natural numbers.
     let mut input = String::new();
@@ -26,6 +28,8 @@ fn main() {
     }
 }
 
+
+/// This function takes in any natural number and if it finds a prime number, it is stored in a vector and returned.
 fn factors(mut number: u64) -> Vec<u64> {
     let mut i = 2;
     let mut prime_factors = vec![];

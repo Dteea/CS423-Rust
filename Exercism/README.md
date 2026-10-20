@@ -12,7 +12,7 @@ Build using `cargo build --release`, everything should be running fine I hope. :
 
 ### Comments/Issues
 
-You can probably see the evolution of me learning if you go through the order from string, prime, squares, brackets, and then the last few.
+You can probably see the evolution of me learning if you go through the order from string, prime, squares, brackets, and then the last few. It should be pretty noticeable especially with input. With the evolution, there may be cases where I have not handled the input well and could panic on one project and be completely eliminated in another. Tis' a time to learn and make mistakes. 
 
 ### Other Info
 
