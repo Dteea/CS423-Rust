@@ -9,6 +9,7 @@ A collection of starter Exercism exercises in Rust. Steps through dealing with s
 ### Build & Running
 
 Build using `cargo build --release`, everything should be running fine I hope. :/ I might provide a powershell script to run all of the special cargo build tools, but for right now it has no error checking or anything, just for myself to stop having to type a lot.
+`cargo doc --open` to see the rust doc, I won't lie, it is a bit barren because I want to put more energy in documenting the big stuff.
 
 ### Comments/Issues
 
